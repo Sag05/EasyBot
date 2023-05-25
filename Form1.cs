@@ -1,5 +1,6 @@
 using System.Security;
 
+
 namespace EasyBot
 {
     public partial class Form1 : Form
@@ -31,9 +32,9 @@ namespace EasyBot
             }
         }
 
-        private void startButton_Click(object sender, EventArgs e)
-        {
+        //Start bot
+        private async void startButton_Click(object sender, EventArgs e) => await DiscordStart.StartBot(token);
 
-        }
+        public void outputAddText(string input) => textOutput.Text += input;
     }
 }
